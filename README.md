@@ -149,3 +149,10 @@ npm install --save prism-react-renderer
    props.children.props.className
    className.replace(/language-/,'')
 3. theme
+
+## steps for intial setup
+
+- npm install
+- npm start
+
+ <http://localhost:8000/>
