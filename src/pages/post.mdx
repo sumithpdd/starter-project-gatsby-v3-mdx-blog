@@ -1,5 +1,6 @@
 import { Link } from 'gatsby'
 import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton  } from "../components/Complete"
 
 <section className="mdx-page">
 
@@ -23,4 +24,36 @@ all posts
     <FiInfo className="nice-text-icon"/>
         I'm baby pickled authentic paleo bespoke vinyl locavore mlkshk austin bicycle rights gastropub bitters poutine. Banjo roof party af gentrify squid tumeric franzen. Drinking vinegar tumblr cronut, shaman microdosing iceland cornhole synth tote bag letterpress helvetica keytar selfies chartreuse shoreditch. Viral sartorial salvia, mumblecore brooklyn hella gochujang pickled. +1 pickled XOXO portland deep v fam. Before they sold out church-key chambray ugh, palo santo hella marfa.
 </div>
+
+<h2>
+    React components
+</h2>
+<Counter />
+
+```jsx
+import React from "react"
+import styled from "styled-components"
+import { AiOutlineLike } from "react-icons/ai"
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton/>
+
 </section>
