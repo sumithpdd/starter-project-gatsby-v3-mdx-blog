@@ -3,7 +3,20 @@ import Post from './Post'
 import Banner from '../Banner'
 const Posts = ({ posts, title }) => {
   return (
-    <h4>posts component</h4>
+    <section className="posts">
+      <h3 className="posts-title">{title}</h3>
+      <div className="post-center">
+        {/* posts column */}
+        <article>
+          {posts.map(post => {
+            return <Post key={post.id} {...post}></Post>
+          })}
+        </article>
+        <article>
+          <Banner/>
+        </article>
+      </div>
+    </section>
   )
 }
 
