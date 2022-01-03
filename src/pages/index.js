@@ -5,17 +5,21 @@ import Posts from '../components/Posts'
 
 import { graphql } from 'gatsby'
 const IndexPage = ({ data }) => {
-  const {
-    allMdx: { nodes: posts },
-  } = data
-  return (
-    <Layout>
-      <Hero showPerson />
-      <Posts posts={posts} title ="recent posts"/>
-    </Layout>
-  )
+    const {
+        allMdx: { nodes: posts },
+    } = data
+    return ( <
+        Layout >
+        <
+        Hero showPerson / >
+        <
+        Posts posts = { posts }
+        title = "recent posts" / >
+        <
+        /Layout>
+    )
 }
-export const query = graphql`
+export const query = graphql `
   {
     allMdx(limit: 3, sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
@@ -23,7 +27,7 @@ export const query = graphql`
           title
           author
           category
-          date(formatString: "MMMM, DO YYYY")
+          date(formatString: "MMMM, Do YYYY")
           slug
           readTime
           image {
