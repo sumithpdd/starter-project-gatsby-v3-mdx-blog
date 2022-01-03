@@ -4,21 +4,21 @@ import Hero from '../components/Hero'
 import { graphql } from 'gatsby'
 import Posts from '../components/Posts'
 const PostsPage = ({ data }) => {
-    const { allMdx: { nodes: posts } } = data;
+  const {
+    allMdx: { nodes: posts },
+  } = data
 
-    return <Layout >
-        <
-        Hero / >
-        <
-        Posts posts = { posts }
-    title = "all posts" / >
-        <
-        /Layout>
+  return (
+    <Layout>
+      <Hero />
+      <Posts posts={posts} title="all posts" />
+    </Layout>
+  )
 }
 
-export const query = graphql `
+export const query = graphql`
   {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         frontmatter {
           title
@@ -39,6 +39,5 @@ export const query = graphql `
     }
   }
 `
-
 
 export default PostsPage
