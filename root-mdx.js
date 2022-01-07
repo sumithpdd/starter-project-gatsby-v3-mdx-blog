@@ -1,6 +1,6 @@
-import React from 'react' 
-import { MDXProvider } from "@mdx-js/react"
-import { Headings,Code,Blockquote } from './src/components/Complete'
+import React from 'react'
+import { MDXProvider } from '@mdx-js/react'
+import { Headings, Code, Blockquote, PrismSetup } from './src/components/Complete'
 
 // const myH2 = props => {
 //   return <h2 {...props}>{props.children}</h2>
@@ -15,8 +15,9 @@ const components = {
   h4: Headings.myH4,
   inlineCode: Code,
   blockquote: Blockquote,
+  pre: PrismSetup,
 }
 
-export const wrapMDX = ({ element }) =>{
+export const wrapMDX = ({ element }) => {
   return <MDXProvider components={components}>{element}</MDXProvider>
 }
