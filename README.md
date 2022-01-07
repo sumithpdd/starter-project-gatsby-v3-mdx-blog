@@ -149,3 +149,20 @@ npm install --save prism-react-renderer
    props.children.props.className
    className.replace(/language-/,'')
 3. theme
+
+## steps for intial setup
+
+- npm install
+- npm start
+
+ <http://localhost:8000/>
+
+## To upgrade
+
+- npm i -g gatsby-cli
+
+## To publish
+
+- gatsby clean
+- gatsby build
+This will generate public folder, manually deploy it to netlify by dropping the public folder.
